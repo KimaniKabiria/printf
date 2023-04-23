@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 		for (; format[i] != '%' && format[i] != '\0'; *indx += 1, i++)
 		{
 			if (*indx == 1024)
-			{	_printer(buffer, indx);
+			{	_printer(buffer, *indx);
 				_buff_reset(buffer);
 				*indx = 0;
 			}
@@ -44,6 +44,6 @@ int _printf(const char *format, ...)
 	}
 	va_end(list);
 	buffer[*indx] = '\0';
-	_printer(buffer, indx);
+	_printer(buffer, *indx);
 	return (*indx);
 }

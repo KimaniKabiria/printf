@@ -62,7 +62,7 @@ void print_decimal(va_list list, char *buffer, int *indx)
 
 	i = va_arg(list, int);
 
-	len = _len(i);
+	len = _numlen(i);
 	if (i < 0)
 	{
 		len += 1;
@@ -75,7 +75,7 @@ void print_decimal(va_list list, char *buffer, int *indx)
 	{
 		if (*indx == 1024)
 		{
-			_printer(buffer, indx);
+			_printer(buffer, *indx);
 			_buff_reset(buffer);
 			*indx = 0;
 		}

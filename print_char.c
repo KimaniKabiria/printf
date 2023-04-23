@@ -17,7 +17,7 @@ void print_char(va_list list, char *buffer, int *indx)
 	chr = va_arg(list, int);
 	if (*indx == 1024)
 	{
-		_printer(buffer, indx);
+		_printer(buffer, *indx);
 		_buff_reset(buffer);
 		*indx = 0;
 	}

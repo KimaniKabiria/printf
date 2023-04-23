@@ -21,7 +21,7 @@ void print_str(va_list list, char *buffer, int *indx)
 	{
 		if (*indx == 1024)
 		{
-			_printer(buffer, indx);
+			_printer(buffer, *indx);
 			_buff_reset(buffer);
 			*indx = 0;
 		}
